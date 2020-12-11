@@ -1,0 +1,60 @@
+<!--Grishma Bhattarai
+CISC 3140 TR11
+Homework 7
+Problem: Input a piece of text, modify the text, and then output the text in Javascript-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grishma Bhattarai JavaScript HW </title>
+
+</head>
+
+<script type="text/javascript">
+//function to change the input's size to 120 pixels
+function letsModifyText(){
+
+//erases the result of previous modified text when the button is clicked again, so only new input's modification will be displayed
+finalresult.textContent = "";
+
+//when button is clicked the label is restored to default
+modifiedText.textContent= "Here is your Modified Text:";     
+  
+// "text" is the variable that has been assigned the user's input which is stored in a text box
+let text= inputBox.value;
+
+//change the size of the user's input to 120 pixels
+finalresult.style.fontSize= "120px";
+
+//display the final text
+finalresult.textContent = text;
+
+}
+</script>
+
+
+<body>
+
+<h1> Welcome! </h1> 
+<h2> The goal here is to input a piece of text, modify the text, and then return the modified text!</h2>
+<h3> Let's get started! Enjoy! </h3>
+
+<!--create a label for user's to know that they have to type their input-->
+<label> Type your text here: </label>
+
+<!--create a textbox for user's to type their input-->
+<input type= "text" id="inputBox"> <br> <br>
+
+
+<!--Button to modify the text-->
+<button onclick="letsModifyText()">Click here to modify the text</button> <br> <br>
+
+
+<!--create a label for user's to know that their modified text will be returned here-->
+<label id="modifiedText"> Here is your Modified Text:     </label> <br> <br>
+
+<!--label to get the final text-->
+<label id= "finalresult"> </label>
+
+</body>
+
